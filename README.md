@@ -36,27 +36,32 @@ It also includes **API testing** for OpenWeather API to verify weather data for 
 
 ---
 
-## 🗂 Project Structure
 
-.
-├── pages/ # Page Object Model (POM) classes
-│ ├── LoginPage.js
-│ ├── ProductsPage.js
-│ ├── CartPage.js
-│ └── CheckoutPage.js
-├── tests/ # Test scripts
-│ ├── login.spec.js
-│ ├── checkout.spec.js
-│ └── weather_api.spec.js
-├── utils/ # API helper
-│ └── apiClient.js
-├── package.json
-├── package-lock.json
-├── playwright.config.js
-└── README.md
+## 📂 Project Structure
 
-yaml
-Copy code
+pages/                 # Page Object Model (POM) classes
+    LoginPage.js
+    ProductsPage.js
+    CartPage.js
+    CheckoutPage.js
+
+tests/                 # Test scripts
+    login.spec.js
+    checkout.spec.js
+    weather_api.spec.js
+
+utils/                 # API helper
+    apiClient.js
+
+.github/workflows/     # CI/CD workflow files
+    playwright.yml
+
+package.json
+package-lock.json
+playwright.config.js
+README.md
+.gitignore
+
 
 ---
 
@@ -64,23 +69,18 @@ Copy code
 
 1. Clone the repository:
 
-```bash
+
 git clone https://github.com/Alihassan7693/SEDT-Assignment.git
 cd SEDT-Assignment
 Install dependencies:
 
-bash
-Copy code
+
 npm install
 Install Playwright browsers:
 
-bash
-Copy code
 npx playwright install
 Replace the OpenWeather API key in tests/weather_api.spec.js:
 
-js
-Copy code
 const apiKey = 'YOUR_API_KEY';
 🏃 Running Tests
 
